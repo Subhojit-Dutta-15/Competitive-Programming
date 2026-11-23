@@ -10,15 +10,17 @@ An auto-updating repository tracking my Data Structures and Algorithms practice 
 
 | Platform | Solved |
 | :--- | :---: |
-| **LeetCode** | 0 |
+| **LeetCode** | 1 |
 | **HackerRank** | 0 |
-| **Total** | **0** |
+| **Total** | **1** |
 
 ---
 
 ## 🧩 LeetCode Solutions
 
-*No solutions uploaded yet.*
+| # | Problem | Category / Folder | Solution |
+| :---: | :--- | :---: | :---: |
+| 1 | Two Sum | - | [Python](./Leetcode/0001_two_sum.py) |
 
 ## 🧩 HackerRank Solutions
 
