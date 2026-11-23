@@ -1,0 +1,45 @@
+name: Auto-Update README
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'Leetcode/**'
+      - 'HackerRank/**'
+      - 'update_readme.py'
+  workflow_dispatch: # Allows you to trigger this manually from the GitHub Actions tab
+
+# Required so the Action has permission to push the updated README back to your repo
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run README generator script
+        run: python update_readme.py
+
+      - name: Commit and push updated README
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          # Only commit if README.md actually changed
+          if ! git diff --staged --quiet; then
+            git commit -m "docs: auto-update README stats and tables [skip ci]"
+            git push
+          else
+            echo "No changes to README.md"
+          fi
