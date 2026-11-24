@@ -10,9 +10,9 @@ An auto-updating repository tracking my Data Structures and Algorithms practice 
 
 | Platform | Solved |
 | :--- | :---: |
-| **LeetCode** | 1 |
+| **LeetCode** | 2 |
 | **HackerRank** | 0 |
-| **Total** | **1** |
+| **Total** | **2** |
 
 ---
 
@@ -21,6 +21,7 @@ An auto-updating repository tracking my Data Structures and Algorithms practice 
 | # | Problem | Category / Folder | Solution |
 | :---: | :--- | :---: | :---: |
 | 1 | Two Sum | - | [Python](./Leetcode/0001_two_sum.py) |
+| 2 | Contains Duplicate | - | [Python](./Leetcode/0002_contains_duplicate.py) |
 
 ## 🧩 HackerRank Solutions
 
